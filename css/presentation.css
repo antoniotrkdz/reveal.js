@@ -10,6 +10,7 @@
   --bright: #f0f0f0;
   --white: #ffffff;
   --accent: #ffffff;
+  --term: #1a8c40;
   --mono: 'DM Mono', 'Courier New', monospace;
   --sans: 'Arial Black', sans-serif;
   --special: 'Sixtyfour';
@@ -156,7 +157,7 @@
 
 .cover h1 {
   font-family: var(--sans), 'Arial Black', sans-serif;
-  font-size: 2em;
+  font-size: 1em;
   /* font-weight: 800; */
   color: #c8ccc8;
   letter-spacing: 0em;
@@ -171,7 +172,7 @@
 .cover-subtitle {
   font-family: var(--special);
   font-size: 0.75em;
-  color: var(--subtle);
+  color: var(--term);
   margin-bottom: 2.5rem;
   padding: 0.6em 0.8em;
   /* border-left: 2px solid var(--border); */
@@ -1054,7 +1055,7 @@ img.emoji {
 .glitch {
   font-family: var(--special);
   position: relative;
-  color: #1a8c40;
+  color: var(--term);
   animation: glitch-jitter 9s infinite;
 }
 
