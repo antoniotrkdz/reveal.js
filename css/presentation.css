@@ -80,6 +80,10 @@
   font-style: italic;
 }
 
+.reveal img {
+  margin: 0;
+}
+
 /* ── SLIDE LAYOUT ── */
 .slide-inner {
   display: flex;
@@ -312,6 +316,18 @@
 
 .card-head .icon {
   font-size: 1.2em;
+}
+
+.icon {
+  font-style: normal;
+}
+
+.icon img.emoji,
+img.emoji {
+  height: 1em;
+  width: 1em;
+  vertical-align: -0.1em;
+  display: inline-block;
 }
 
 .card ul {
