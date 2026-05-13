@@ -29,6 +29,7 @@ export default defineConfig({
 			entry: {
 				reveal: resolve(__dirname, 'css/reveal.scss'),
 				reset: resolve(__dirname, 'css/reset.css'),
+				presentation: resolve(__dirname, 'css/presentation.css'),
 
 				...themeEntries,
 			},
