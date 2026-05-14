@@ -289,6 +289,10 @@
   grid-template-columns: repeat(3, 1fr);
 }
 
+.card-grid-1 {
+  grid-template-columns: 1fr;
+}
+
 .card-grid-2-1 {
   grid-template-columns: 3fr 2fr;
 }
