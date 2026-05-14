@@ -1,16 +1,16 @@
 /* ── THEME VARIABLES ── */
 :root {
-  --bg: #0a0a0a;
-  --bg2: #141414;
-  --bg3: #1e1e1e;
-  --border: #2a2a2a;
-  --muted: #555;
-  --subtle: #888;
-  --body: #ccc;
-  --bright: #f0f0f0;
-  --white: #ffffff;
-  --accent: #ffffff;
-  --term: #1a8c40;
+  --bg: #f4efe4;
+  --bg2: #ece6d5;
+  --bg3: #e2dbc9;
+  --border: #c4baa8;
+  --muted: #9a8f7a;
+  --subtle: #6a5f4a;
+  --body: #2a2015;
+  --bright: #0d0a05;
+  --white: #080502;
+  --accent: #1a1a1a;
+  --term: #1a6b30;
   --mono: 'DM Mono', 'Courier New', monospace;
   --sans: 'Arial Black', sans-serif;
   --special: 'Sixtyfour';
