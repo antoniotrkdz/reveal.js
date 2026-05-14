@@ -661,6 +661,8 @@ img.emoji {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  gap: 0.5rem;
   background: var(--bg3);
   border-right: 1px solid var(--border);
   padding: 0.5em;
