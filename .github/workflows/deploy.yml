@@ -28,11 +28,19 @@ jobs:
         env:
           NODE_ENV: production
 
+      - name: Assemble deploy artifacts
+        run: |
+          mkdir -p _deploy
+          cp index.html _deploy/
+          cp -r dist/ _deploy/dist/
+          mkdir -p _deploy/css
+          cp css/presentation.css _deploy/css/
+
       - name: Deploy to VPS via rsync
         uses: burnett01/rsync-deployments@7.0.1
         with:
           switches: -avzr --delete --exclude='.git*'
-          path: dist/
+          path: _deploy/
           remote_path: ${{ secrets.DEPLOY_PATH }}
           remote_host: ${{ secrets.VPS_HOST }}
           remote_port: ${{ secrets.VPS_PORT }}
