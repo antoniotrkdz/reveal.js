@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="dist/theme/black.css">
 
   <!-- Theme used for syntax highlighted code -->
-  <link rel="stylesheet" href="dist/plugin/highlight/monokai.css">
+  <link rel="stylesheet" href="plugin/highlight/monokai.css">
 
   <!-- Google Fonts — funziona online; offline cade sul fallback system stack -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -547,12 +547,12 @@
   <!-- <script src="plugin/markdown/markdown.js"></script> -->
   <!-- <script src="plugin/highlight/highlight.js"></script> -->
   <script type="module">
-    import Reveal from './dist/reveal.mjs';
-    import RevealZoom from './dist/plugin/zoom.mjs';
-    import RevealNotes from './dist/plugin/notes.mjs';
-    import RevealSearch from './dist/plugin/search.mjs';
-    import RevealMarkdown from './dist/plugin/markdown.mjs';
-    import RevealHighlight from './dist/plugin/highlight.mjs';
+    import Reveal from 'reveal.js';
+    import RevealZoom from 'reveal.js/plugin/zoom';
+    import RevealNotes from 'reveal.js/plugin/notes';
+    import RevealSearch from 'reveal.js/plugin/search';
+    import RevealMarkdown from 'reveal.js/plugin/markdown';
+    import RevealHighlight from 'reveal.js/plugin/highlight';
     // ── Parallax sizing ──────────────────────────────────────────────────────
     // Quante sezioni orizzontali ci sono (esclude le verticali nested)?
     const SLIDE_W = 1280;
