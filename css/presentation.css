@@ -1,16 +1,28 @@
 /* ── THEME VARIABLES ── */
 :root {
   --bg: #f4efe4;
-  --bg2: #ece6d5;
   --bg3: #e2dbc9;
   --border: #c4baa8;
   --muted: #9a8f7a;
   --subtle: #6a5f4a;
-  --body: #2a2015;
-  --bright: #0d0a05;
-  --white: #080502;
-  --accent: #1a1a1a;
+  --black: #2a2015;
+  --white: #f4efe4;
   --term: #1a6b30;
+
+  /* CSS palette 1 */
+  --soft-blush: #f1dedeff;
+  --lilac-ash: #bbacc1ff;
+  --dim-grey: #776972ff;
+  --grey-olive: #909580ff;
+  --ebony: #545643ff;
+
+  /* CSS palette 2 */
+  --dim-grey: #7a7265ff;
+  --silver: #c0b7b1ff;
+  --toffee-brown: #8e6e53ff;
+  --camel: #c69c72ff;
+  --graphite: #433e3fff;
+
   --mono: 'DM Mono', 'Courier New', monospace;
   --sans: 'Arial Black', sans-serif;
   --special: 'Sixtyfour';
@@ -23,7 +35,7 @@
 
 .reveal {
   font-family: var(--sans);
-  color: var(--body);
+  color: var(--black);
 }
 
 .reveal .slides {
@@ -68,7 +80,7 @@
 .reveal li {
   font-size: 0.82em;
   line-height: 1.65;
-  color: var(--body);
+  color: var(--black);
 }
 
 .reveal strong {
@@ -172,7 +184,7 @@
 .cover-subtitle {
   font-family: var(--special);
   font-size: 0.75em;
-  color: var(--term);
+  color: var(--subtle);
   margin-bottom: 2.5rem;
   padding: 0.6em 0.8em;
   /* border-left: 2px solid var(--border); */
@@ -211,7 +223,7 @@
 
 .cover-meta-item .val {
   font-size: 0.65em;
-  color: var(--body);
+  color: var(--black);
 }
 
 .cover-footer {
@@ -232,7 +244,7 @@
 
 .cover-footer .cand-name {
   font-size: 0.65em;
-  color: var(--body);
+  color: var(--black);
   /* font-style: italic; */
 }
 
@@ -298,7 +310,7 @@
 }
 
 .card {
-  background: var(--bg2);
+  background: var(--bg3);
   border: 1px solid var(--border);
   padding: 1.2em 1.3em;
   display: flex;
@@ -343,7 +355,7 @@ img.emoji {
 
 .card li {
   font-size: 0.72em;
-  color: var(--body);
+  color: var(--black);
   padding: 0.25em 0;
   border-bottom: 1px solid var(--border);
   display: flex;
@@ -363,7 +375,7 @@ img.emoji {
 
 .card p {
   font-size: 0.72em;
-  color: var(--body);
+  color: var(--black);
   margin: 0;
   line-height: 1.5;
 }
@@ -400,7 +412,7 @@ img.emoji {
   font-family: var(--mono);
   font-size: 0.52em;
   color: var(--muted);
-  background: var(--bg2);
+  background: var(--bg3);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -435,29 +447,29 @@ img.emoji {
   word-break: break-word;
   min-width: 0;
   color: var(--muted);
-  background: var(--bg2);
+  background: var(--bg3);
 }
 
 .tl-label.fragment.high.current-fragment {
-  background: var(--body);
+  background: var(--black);
   color: var(--bg);
   font-weight: bold;
 }
 
 .tl-desc.fragment.high.current-fragment {
-  color: var(--body);
+  color: var(--black);
   /* font-style: italic; */
 }
 
 /* Avvio evidenziato per default finché nessun fragment è current */
 .timeline:not(:has(.current-fragment)) .tl-row:first-child .tl-label {
-  background: var(--body);
+  background: var(--black);
   color: var(--bg);
   font-weight: bold;
 }
 
 .timeline:not(:has(.current-fragment)) .tl-row:first-child .tl-desc {
-  color: var(--body);
+  color: var(--black);
   /* font-style: italic; */
 }
 
@@ -467,7 +479,7 @@ img.emoji {
 }
 
 .tl-row.highlight .tl-desc {
-  color: var(--bright);
+  color: var(--black);
   font-style: italic;
 } */
 
@@ -544,7 +556,7 @@ img.emoji {
 
 .ph-block {
   border: 1px solid var(--border);
-  background: var(--bg2);
+  background: var(--bg3);
   display: flex;
   flex-direction: column;
 }
@@ -607,7 +619,7 @@ img.emoji {
 /* ── EXERCISE SLIDE ── */
 .ex-block {
   border: 1px solid var(--border);
-  background: var(--bg2);
+  background: var(--bg3);
   margin-bottom: 0.5rem;
 }
 
@@ -632,7 +644,7 @@ img.emoji {
 .ex-block-body p {
   font-size: 0.62em;
   /* font-style: italic; */
-  color: var(--body);
+  color: var(--black);
   margin: 0 0 0.2em;
   line-height: 1.35;
 }
@@ -676,7 +688,7 @@ img.emoji {
 
 .incl-desc {
   font-size: 0.68em;
-  color: var(--body);
+  color: var(--black);
   background: var(--bg);
   padding: 0.55em 0.9em;
   display: flex;
@@ -694,7 +706,7 @@ img.emoji {
 
 .val-col {
   border: 1px solid var(--border);
-  background: var(--bg2);
+  background: var(--bg3);
   display: flex;
   flex-direction: column;
 }
@@ -723,7 +735,7 @@ img.emoji {
 
 .val-col li {
   font-size: 0.60em;
-  color: var(--body);
+  color: var(--black);
   /* font-style: italic; */
   line-height: 1.4;
   padding-bottom: 0.4em;
@@ -1012,7 +1024,7 @@ img.emoji {
 
 .takeaway-text {
   font-size: 0.72em;
-  color: var(--body);
+  color: var(--black);
   background: var(--bg);
   padding: 0.65em 0.9em;
   /* font-style: italic; */
@@ -1239,7 +1251,7 @@ img.emoji {
 
 .ctx-body {
   font-size: 0.72em;
-  color: var(--body);
+  color: var(--black);
   background: var(--bg);
   line-height: 1.3;
   padding: 0.65em 0.9em;
