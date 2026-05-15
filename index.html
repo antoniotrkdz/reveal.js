@@ -546,25 +546,13 @@
   <!-- <script src="plugin/notes/notes.js"></script> -->
   <!-- <script src="plugin/markdown/markdown.js"></script> -->
   <!-- <script src="plugin/highlight/highlight.js"></script> -->
-  <script type="importmap">
-  {
-    "imports": {
-      "reveal.js":                   "./dist/reveal.mjs",
-      "reveal.js/plugin/zoom":       "./dist/plugin/zoom.mjs",
-      "reveal.js/plugin/notes":      "./dist/plugin/notes.mjs",
-      "reveal.js/plugin/search":     "./dist/plugin/search.mjs",
-      "reveal.js/plugin/markdown":   "./dist/plugin/markdown.mjs",
-      "reveal.js/plugin/highlight":  "./dist/plugin/highlight.mjs"
-    }
-  }
-  </script>
   <script type="module">
-    import Reveal from 'reveal.js';
-    import RevealZoom from 'reveal.js/plugin/zoom';
-    import RevealNotes from 'reveal.js/plugin/notes';
-    import RevealSearch from 'reveal.js/plugin/search';
-    import RevealMarkdown from 'reveal.js/plugin/markdown';
-    import RevealHighlight from 'reveal.js/plugin/highlight';
+    import Reveal from './dist/reveal.mjs';
+    import RevealZoom from './dist/plugin/zoom.mjs';
+    import RevealNotes from './dist/plugin/notes.mjs';
+    import RevealSearch from './dist/plugin/search.mjs';
+    import RevealMarkdown from './dist/plugin/markdown.mjs';
+    import RevealHighlight from './dist/plugin/highlight.mjs';
     // ── Parallax sizing ──────────────────────────────────────────────────────
     // Quante sezioni orizzontali ci sono (esclude le verticali nested)?
     const SLIDE_W = 1280;
