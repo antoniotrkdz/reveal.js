@@ -35,6 +35,7 @@ jobs:
           cp -r dist/ _deploy/dist/
           mkdir -p _deploy/css
           cp css/presentation.css _deploy/css/
+          cp -r assets/ _deploy/assets/
 
       - name: Deploy to VPS via rsync
         uses: burnett01/rsync-deployments@7.0.1

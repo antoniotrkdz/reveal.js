@@ -1,5 +1,10 @@
 /* ── THEME VARIABLES ── */
 :root {
+  --mono: 'DM Mono', 'Courier New', monospace;
+  --sans: 'Arial Black', sans-serif;
+  --special: 'Sixtyfour';
+
+  /* palette cream (originale) */
   --bg: #f4efe4;
   --bg3: #e2dbc9;
   --border: #c4baa8;
@@ -7,7 +12,7 @@
   --subtle: #6a5f4a;
   --black: #2a2015;
   --white: #f4efe4;
-  --term: #1a6b30;
+
 
   /* CSS palette 1 */
   --soft-blush: #f1dedeff;
@@ -23,9 +28,47 @@
   --camel: #c69c72ff;
   --graphite: #433e3fff;
 
-  --mono: 'DM Mono', 'Courier New', monospace;
-  --sans: 'Arial Black', sans-serif;
-  --special: 'Sixtyfour';
+  /* palette 1 applicata */
+  /* --bg: #f1dede; */
+  /* soft-blush */
+  /* --bg3: #d6c5d0; */
+  /* blend soft-blush + lilac-ash */
+  /* --border: #bbacc1; */
+  /* lilac-ash */
+  /* --muted: #909580; */
+  /* grey-olive */
+  /* --subtle: #776972; */
+  /* dim-grey */
+  /* --black: #545643; */
+  /* ebony */
+  /* --white: #f1dede; */
+  /* soft-blush (testo su scuro) */
+
+  /* palette 2 applicata */
+  /* --bg: #f5f0ee; */
+  /* silver chiarito */
+  /* --bg3: #e0d7d2; */
+  /* blend silver + toffee-brown */
+  /* --border: #c0b7b1; */
+  /* silver */
+  /* --muted: #7a7265; */
+  /* dim-grey */
+  /* --subtle: #8e6e53; */
+  /* toffee-brown */
+  /* --black: #433e3f; */
+  /* graphite */
+  /* --white: #f5f0ee; */
+  /* (testo su scuro) */
+
+  /* palette 3 — cyberpunk light */
+  /* --cyber-white: #f0eeff;
+  --cyber-glass: #dddaf5;
+  --cyber-wire:  #9b8fd4;
+  --cyber-dim:   #6b5ab8;
+  --cyber-ink:   #2d1f7a;
+  --cyber-void:  #0a0820;
+  --neon-cyan:   #00d4e8;
+  --neon-pink:   #e800c8; */
 }
 
 /* ── BASE ── */
@@ -50,9 +93,9 @@
 .reveal h1,
 .reveal h2,
 .reveal h3 {
-  font-family: var(--sans);
+  font-family: var(--sans), 'Arial Black', sans-serif;
   font-weight: 800;
-  color: var(--white);
+  color: var(--subtle);
   text-transform: uppercase;
   letter-spacing: 0.06em;
   line-height: 1.1;
@@ -133,7 +176,6 @@
 
 /* ── COVER SLIDE ── */
 .cover {
-  /* background: var(--bg); */
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -142,16 +184,6 @@
   box-sizing: border-box;
   position: relative;
   overflow: hidden;
-}
-
-.cover::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: var(--white);
 }
 
 .cover-badge {
@@ -168,17 +200,10 @@
 }
 
 .cover h1 {
-  font-family: var(--sans), 'Arial Black', sans-serif;
-  font-size: 1em;
-  /* font-weight: 800; */
-  color: #c8ccc8;
-  letter-spacing: 0em;
-  text-transform: none;
+  font-size: 0.85em;
   line-height: 1.0;
   margin-bottom: 0.8rem;
   font-optical-sizing: auto;
-  font-weight: 800;
-  font-style: normal;
 }
 
 .cover-subtitle {
@@ -192,38 +217,6 @@
   font-variation-settings:
     "BLED" 20,
     "SCAN" -15;
-}
-
-.cover-meta {
-  display: flex;
-  gap: 0;
-  border: 1px solid var(--border);
-  width: fit-content;
-  margin-bottom: 1.5rem;
-}
-
-.cover-meta-item {
-  padding: 0.6em 1.4em;
-  border-right: 1px solid var(--border);
-}
-
-.cover-meta-item:last-child {
-  border-right: none;
-}
-
-.cover-meta-item .label {
-  font-family: var(--mono);
-  font-size: 0.45em;
-  letter-spacing: 0.2em;
-  color: var(--muted);
-  text-transform: uppercase;
-  display: block;
-  margin-bottom: 0.2em;
-}
-
-.cover-meta-item .val {
-  font-size: 0.65em;
-  color: var(--black);
 }
 
 .cover-footer {
@@ -258,6 +251,12 @@
   font-size: 0.5em;
   color: var(--muted);
   font-family: var(--mono);
+}
+
+.cover-unipg-logo {
+  height: 3em;
+  margin-left: auto;
+  opacity: 0.85;
 }
 
 .cover-deco {
@@ -1052,18 +1051,25 @@ img.emoji {
 
 /* ── CHIUSURA TERMINAL THEME ── */
 .chiusura-term .quote-block {
-  border-left-color: rgba(51, 255, 102, 0.25);
+  border-left-color: var(--muted);
 }
 
 .chiusura-term .quote-block p {
-  color: rgba(51, 255, 102, 0.45);
+  color: var(--muted);
 }
 
 .chiusura-term .made-with-label {
-  color: rgba(51, 255, 102, 0.4);
+  color: var(--muted);
 }
 
-.chiusura-term .made-with img,
+.chiusura-term .made-with img {
+  opacity: 0.90;
+  filter: none;
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 4px;
+  padding: 0.15em 0.45em;
+}
+
 .chiusura-term .made-with svg {
   opacity: 0.80;
   filter: none;
@@ -1073,7 +1079,7 @@ img.emoji {
 .glitch {
   font-family: var(--special);
   position: relative;
-  color: var(--term);
+  color: var(--subtle);
   animation: glitch-jitter 9s infinite;
 }
 
@@ -1287,7 +1293,7 @@ img.emoji {
 }
 
 .metod-grid .card p {
-  font-size: 0.65em;
+  font-size: 0.55em;
 }
 
 /* ── STRUMENTI GRID ── */
