@@ -1196,11 +1196,11 @@ img.emoji {
 /* ── PROGRESS BAR ── */
 .reveal .progress {
   background: var(--bg3);
-  height: 2px;
+  height: 5px;
 }
 
 .reveal .progress span {
-  background: var(--white);
+  background: var(--black);
 }
 
 /* ── CONTROLS ── */
@@ -1214,7 +1214,7 @@ img.emoji {
 
 .reveal .controls button:hover {
   opacity: 1;
-  color: var(--white);
+  color: var(--black);
 }
 
 /* ── FRAGMENT ANIMATIONS ── */
