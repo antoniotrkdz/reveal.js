@@ -281,9 +281,9 @@
 }
 
 .card {
-  background: var(--bg3);
+  background: var(--bg);
   border: 1px solid var(--border);
-  padding: 1.2em 1.3em;
+  padding: 0;
   display: flex;
   flex-direction: column;
 }
@@ -294,12 +294,17 @@
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--subtle);
-  padding-bottom: 0.6em;
+  padding: 0.6em 1em;
   border-bottom: 1px solid var(--border);
-  margin-bottom: 0.8em;
+  background: var(--bg3);
   display: flex;
   align-items: center;
   gap: 0.5em;
+}
+
+.card-body {
+  padding: 0.8em 1.2em;
+  flex: 1;
 }
 
 .card-head .icon {
@@ -320,7 +325,7 @@ img.emoji {
 
 .card ul {
   margin: 0;
-  padding: 0;
+  padding: 0.6em 1.2em;
   list-style: none;
 }
 
@@ -328,7 +333,7 @@ img.emoji {
   font-size: 0.72em;
   color: var(--black);
   padding: 0.25em 0;
-  border-bottom: 1px solid var(--border);
+  /* border-bottom: 1px solid var(--border); */
   display: flex;
   gap: 0.5em;
   line-height: 1.4;
@@ -349,6 +354,7 @@ img.emoji {
   font-size: 0.72em;
   color: var(--black);
   margin: 0;
+  padding: 0.6em 1.2em;
   line-height: 1.5;
 }
 
@@ -384,7 +390,7 @@ img.emoji {
   font-family: var(--mono);
   font-size: 0.52em;
   color: var(--muted);
-  background: var(--bg3);
+  background: var(--bg);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -419,7 +425,7 @@ img.emoji {
   word-break: break-word;
   min-width: 0;
   color: var(--muted);
-  background: var(--bg3);
+  background: var(--bg);
 }
 
 .tl-label.fragment.high.current-fragment {
@@ -430,7 +436,10 @@ img.emoji {
 
 .tl-desc.fragment.high.current-fragment {
   color: var(--black);
-  /* font-style: italic; */
+}
+
+.tl-time.fragment.high.current-fragment {
+  color: var(--black);
 }
 
 /* Avvio evidenziato per default finché nessun fragment è current */
@@ -442,7 +451,10 @@ img.emoji {
 
 .timeline:not(:has(.current-fragment)) .tl-row:first-child .tl-desc {
   color: var(--black);
-  /* font-style: italic; */
+}
+
+.timeline:not(:has(.current-fragment)) .tl-row:first-child .tl-time {
+  color: var(--black);
 }
 
 /* ── OBJECTIVE ROWS ── */
@@ -504,7 +516,7 @@ img.emoji {
 /* ── PLACEHOLDER SLIDE ── */
 .ph-block {
   border: 1px solid var(--border);
-  background: var(--bg3);
+  background: var(--bg);
   display: flex;
   flex-direction: column;
 }
@@ -517,6 +529,7 @@ img.emoji {
   color: var(--subtle);
   padding: 0.4em 0.8em;
   border-bottom: 1px solid var(--border);
+  background: var(--bg3);
   display: flex;
   align-items: center;
   gap: 0.5em;
@@ -593,13 +606,13 @@ img.emoji {
 .val-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+  gap: 0.75rem;
   flex: 1;
 }
 
 .val-col {
   border: 1px solid var(--border);
-  background: var(--bg3);
+  background: var(--bg);
   display: flex;
   flex-direction: column;
 }
@@ -612,6 +625,7 @@ img.emoji {
   color: var(--subtle);
   padding: 0.35em 0.6em;
   border-bottom: 1px solid var(--border);
+  background: var(--bg3);
   display: flex;
   align-items: center;
   gap: 0.4em;
@@ -619,20 +633,19 @@ img.emoji {
 
 .val-col ul {
   margin: 0;
-  padding: 0.5em 0.6em;
+  padding: 0.5em 0.5em;
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 0.5em;
+  gap: 0.4em;
 }
 
 .val-col li {
   font-size: 0.60em;
   color: var(--black);
-  /* font-style: italic; */
   line-height: 1.4;
   padding-bottom: 0.4em;
-  border-bottom: 1px solid var(--border);
+  /* border-bottom: 1px solid var(--border); */
 }
 
 .val-col li:last-child {
@@ -699,10 +712,7 @@ img.emoji {
   color: #aacc00;
 }
 
-.v7,
-.v8,
-.v9,
-.v10 {
+.v7plus {
   color: #48bb78;
 }
 
@@ -975,20 +985,16 @@ img.emoji {
 }
 
 /* ── COMPETENZE GRID ── */
-.competenze-grid .card {
-  padding: 0.7em 0.9em;
-}
-
 .competenze-grid .card li {
   font-size: 0.62em;
 }
 
 /* ── METODOLOGIE GRID ── */
-.metod-grid .card {
-  padding: 0.4em 1em;
+.metod-grid .card p {
+  font-size: 0.55em;
 }
 
-.metod-grid .card p {
+.metod-grid .card li {
   font-size: 0.55em;
 }
 
@@ -1000,14 +1006,8 @@ img.emoji {
   flex: 1;
 }
 
-.tool-grid .card {
-  padding: 0.4em 0.8em;
-}
-
 .tool-grid .card-head {
   font-size: 0.5em;
-  margin-bottom: 0.5em;
-  padding-bottom: 0.4em;
 }
 
 .tool-grid .card li {
@@ -1043,7 +1043,7 @@ img.emoji {
 
 .val-layout {
   display: flex;
-  gap: 1em;
+  gap: 0.5em;
   align-items: flex-start;
   font-size: 0.75em;
 }
